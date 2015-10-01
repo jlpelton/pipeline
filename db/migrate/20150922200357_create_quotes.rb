@@ -2,8 +2,8 @@ class CreateQuotes < ActiveRecord::Migration
   def change
     create_table :quotes do |t|
       
-      t.string :feeling
-      t.string :answer
+      t.string : author
+      t.string : saying
 
       t.timestamps
     end
