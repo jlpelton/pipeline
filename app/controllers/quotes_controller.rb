@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
   def index
-    @quote = Quote.all
+    @quote = Quote.order("RANDOM()").first
   end
 
   def new
@@ -8,11 +8,14 @@ class QuotesController < ApplicationController
   end
 
   def create
-    Quote.create(quote_params)
+    #Quote.create(quote_params)
     redirect_to root_path
   end
 
-  def quote_params
-    params.require(:quote).permit(:saying, :author)
-  end
+
 end
+
+
+  #def quote_params
+    #params.require(:quote).permit(:saying, :author)
+  #end
