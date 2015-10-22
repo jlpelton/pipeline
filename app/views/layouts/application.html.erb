@@ -9,9 +9,9 @@
 <body>
 
 <%= yield %>
+ <!-- Button trigger modal -->
+      <%= link_to 'Add feeling', '#', :data => {:toggle => 'modal', :target => '#myModal'} %>
 
-</body>
-</html>
 
 
 
@@ -25,6 +25,7 @@
         </div>
         <%= simple_form_for Quote.new do |f| %>
           <div class="modal-body">
+            <%= f.input :feeling, :label => "Your feeling", :placeholder => 'Happy' %>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -35,5 +36,7 @@
     </div>
   </div>
 
+</body>
 
+</html>
 

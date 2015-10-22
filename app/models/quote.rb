@@ -1,4 +1,4 @@
 class Quote < ActiveRecord::Base
-  validates :saying, :presence => true
+  validates :feeling, :presence => true
 end
 
